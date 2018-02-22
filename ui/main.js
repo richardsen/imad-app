@@ -9,5 +9,6 @@ element.innerHTML = 'What the cluck bro?????';
 var img= document.getElementById('madi');
 
 img.onclick= function () {
+    var inte=setInterval(moveLeft,100);
     img.style.marginLeft='1000px';
 };
