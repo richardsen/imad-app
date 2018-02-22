@@ -8,7 +8,7 @@ element.innerHTML = 'What the cluck bro?????';
 
 var img= document.getElementById('madi');
 var marginLeft=0;
-function marginRight () {
+function moveRight () {
     marginLeft= marginLeft + 10;
     img.style.marginLeft=marginLeft + 'px';
 }
