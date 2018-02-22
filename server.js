@@ -5,7 +5,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var content={
+var articleOne={
     
     title: 'Article-one',
     heading:'Article-one',
@@ -68,7 +68,7 @@ var htmlTemplate={`
 </div>
 </body>
 </html>
-`:
+`;
     return htmlTemplate;
 }
 
