@@ -6,7 +6,7 @@ var element= document.getElementById("main-text");
 
 element.innerHTML = 'What the cluck bro?????';
 
-var img= document.getElementById("img");
+var img= document.getElementById("imge");
 
 img.onclick= function () {
     img.style.marginleft= '100px';
