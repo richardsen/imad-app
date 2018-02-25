@@ -15,6 +15,6 @@ button.onclick= function () {
       }
       
 };
-    request.open('GET', 'https://http://richardsen2493.imad.hasura-app.io/', true);
+    request.open('GET', 'https://http://richardsen2493.imad.hasura-app.io/counter', true);
     request.send(null);
 };
