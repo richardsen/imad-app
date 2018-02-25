@@ -21,3 +21,17 @@ button.onclick= function () {
     request.open('GET', 'https://http://richardsen2493.imad.hasura-app.io/counter', true);
     request.send(null);
 };
+//Submit name
+var nameInput=document.getElementById('name');
+var name= nameInput.value();
+var submit=document.getElementById('submit_button');
+submit.onclick= function(){
+    //make request to server and send name, capture the names and render as a list
+    var names= [name1,name2,name3];
+    var list='';
+    for(var i=0; i<=names.length;i++){
+        list +='<li>'+ names[i] '</li>';
+    }
+    var ul=document.getElementById('name_list');
+    ul.innerHTML=list;
+};
