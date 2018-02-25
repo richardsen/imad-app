@@ -117,7 +117,7 @@ app.get('/', function (req, res) {
 var x=0;
 app.get('/counter', function (req,res){
     x=x+1;
-    res.send(counter.toString());
+    res.send(x.toString());
 });
 app.get(':/articleName', function (req, res) {
     //articleName=article-one
