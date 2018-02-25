@@ -4,7 +4,6 @@ console.log('Loaded!');
 
 var element= document.getElementById("main-text");
 
-element.innerHTML = 'What the cluck bro?????';
 
 var img= document.getElementById('madi');
 var marginLeft=0;
