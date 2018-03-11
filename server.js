@@ -1,6 +1,7 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
+ var crypto= require('crypto');
 
 var app = express();
 app.use(morgan('combined'));
@@ -82,6 +83,7 @@ function createTemplate(data){
     var heading = data.heading;
     var date = data.date;
     var content = data.content;
+   
 
     var htmlTemplate=`
 <html>
@@ -138,6 +140,16 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
+function hash(input){
+  var hashed=crypto.pbkdf2Sync(input, salt,10000,512,'sha512'); 
+    return hashed.toString('hex');
+    
+    
+};
+app.get('/hash/input', function(req,res){
+    var hashString= hash(req.param.input, 'This is a random value');
+    res.send(hashString);
+});
 var names=[];
 app.get('/submit-name/:name', function(req,res){
     //Get name from the request
